@@ -27,9 +27,9 @@ const Contact = () => {
             />
           </h1>
           <p>
-            I am interested in freelance opportunities - especially on ambitious
-            or large projects. However, if you have any other requests or
-            questions, don't hesitate to contact me using below form either.
+            I am interested in full-time or part-time job as well as freelance
+            opportunities. However, if you have any other requests or questions,
+            don't hesitate to contact me using below form either.
           </p>
           <div className="contact-form">
             <form ref={form} onSubmit={sendEmail}>
@@ -81,7 +81,7 @@ const Contact = () => {
             zoom={13}>
             <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
             <Marker position={[23.698132714904357, 90.46327056772509]}>
-              <Popup>Sloba lives here, come over for a cup of coffee :)</Popup>
+              <Popup>Sobuj Lives Here . Come Here if you need me.</Popup>
             </Marker>
           </MapContainer>
         </div>
