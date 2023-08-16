@@ -2,6 +2,9 @@ import { useEffect, useRef, useState } from "react";
 import AnimatedLetters from "../AnimatedLetters/AnimatedLetters";
 import "./Contact.scss";
 import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
+import emailjs from "@emailjs/browser";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Contact = () => {
   const [letterClass, setLetterClass] = useState("text-animate");
@@ -13,7 +16,31 @@ const Contact = () => {
     }, 3000);
   }, []);
 
-  const sendEmail = () => {};
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        import.meta.env.VITE_emailjs_service_ID,
+        import.meta.env.VITE_template_ID,
+        form.current,
+        import.meta.env.VITE_public_KEY
+      )
+      .then(
+        (result) => {
+          toast.success("Your email has been sent !", {
+            position: toast.POSITION.TOP_LEFT,
+          });
+          e.target.reset();
+        },
+        (error) => {
+          console.log(error.text);
+          toast.error("Sorry! Email is not sent.", {
+            position: toast.POSITION.TOP_LEFT,
+          });
+        }
+      );
+  };
 
   return (
     <>
@@ -86,6 +113,7 @@ const Contact = () => {
           </MapContainer>
         </div>
       </div>
+      <ToastContainer />
     </>
   );
 };
