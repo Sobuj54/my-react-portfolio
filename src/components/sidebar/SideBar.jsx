@@ -4,7 +4,6 @@ import logoS from "../../assets/images/logo-s.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faHome, faUser } from "@fortawesome/free-solid-svg-icons";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
-// import logoSub from "../../assets/images/logo_sub.png";
 
 const SideBar = () => {
   return (
@@ -37,7 +36,7 @@ const SideBar = () => {
       <ul>
         <li>
           <a
-            href="https://www.linkedin.com/authwall?trk=qf&original_referer=https://www.google.com/&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2F"
+            href="https://www.linkedin.com/in/sobuj-ahmed-8a782b177/"
             target="_blank"
             rel="noreferrer">
             <FontAwesomeIcon icon={faLinkedin} color="#4d4d4e" />

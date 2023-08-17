@@ -126,3 +126,14 @@
         }
     }
 }
+
+@media screen and (max-width: 600px) {
+    .side-bar{
+    background: #181818;
+    width: 60px;
+    height:100%;
+    position: absolute;
+    top: 0;
+    z-index: 3;
+    }
+}

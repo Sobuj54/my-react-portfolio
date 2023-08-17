@@ -33,3 +33,35 @@
     rotate: calc(30deg);
   }
   
+  @media screen and (max-width: 600px) {
+    .logo-container {
+      z-index: 0;
+      width: 100px;
+      height: 500px;
+      opacity: 0;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom:0;
+      left: auto;
+      margin: auto;
+  
+  
+      .solid-logo {
+        position: absolute;
+        top: auto;
+        right: auto;
+        bottom: auto;
+        left: 0;
+        margin: auto;
+        width: 100%;
+        opacity: 0;
+        transform: rotateZ(30deg) !important;
+        z-index: 1;
+      }
+    }
+  
+    .right-logo{
+      display: none;
+    }
+  }
