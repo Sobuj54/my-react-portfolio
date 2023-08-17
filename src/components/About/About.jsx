@@ -11,6 +11,7 @@ import {
 import Loader from "react-loaders";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import AnimatedLetters from "../AnimatedLetters/AnimatedLetters";
+import { Helmet } from "react-helmet-async";
 
 const About = () => {
   const [letterClass, setLetterClass] = useState("text-animate");
@@ -23,6 +24,9 @@ const About = () => {
 
   return (
     <>
+      <Helmet>
+        <title>Sobuj | About</title>
+      </Helmet>
       <div className="container about-page">
         <div className="text-zone">
           <h1>

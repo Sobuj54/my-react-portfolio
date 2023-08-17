@@ -5,6 +5,7 @@ import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 import emailjs from "@emailjs/browser";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { Helmet } from "react-helmet-async";
 
 const Contact = () => {
   const [letterClass, setLetterClass] = useState("text-animate");
@@ -44,6 +45,9 @@ const Contact = () => {
 
   return (
     <>
+      <Helmet>
+        <title>Sobuj | Contact</title>
+      </Helmet>
       <div className="container contact-page">
         <div className="text-zone">
           <h1>
