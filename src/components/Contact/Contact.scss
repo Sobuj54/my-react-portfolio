@@ -126,3 +126,18 @@
       display: none;
     }
   }
+
+  @media screen and (max-width:  600px) {
+    .map-wrap {
+      position: absolute;
+      top: 115%;
+      left: 20%;
+      background: rgba(8, 253, 216, 0.1);
+      float: none;
+      width: 75%;
+    }
+
+    .info-map {
+      display: none;
+    }
+  }
